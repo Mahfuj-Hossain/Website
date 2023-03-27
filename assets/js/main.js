@@ -1,3 +1,5 @@
+//Slider Coding for the home page
+
 const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
 const slideshow = document.querySelector('.slideshow-container');
@@ -15,7 +17,7 @@ setInterval(() => {
     slideIndex = 0;
   }
   changeSlide(slideIndex);
-}, 6000);
+}, 5000);
 
 // Add click event listener to each dot
 dots.forEach((dot, index) => {
@@ -39,60 +41,22 @@ function changeSlide(index) {
   dots[index].classList.add('active');
 }
 
-//--------------------------------------------------------------------------------------
 
-// const sliderTitle = document.querySelector('.slider-title-text');
-//   const words = sliderTitle.innerText.split(' ');
-//   sliderTitle.innerText = '';
+// menu slider below
 
-//   words.forEach((word) => {
-//     const wordSpan = document.createElement('span');
-//     wordSpan.innerText = word;
-//     wordSpan.classList.add('word');
-//     sliderTitle.appendChild(wordSpan);
-//   });
 
-//   let charIndex = 0;
-//   let wordIndex = 0;
-//   const wordSpans = document.querySelectorAll('.word');
-//   const fadeInDuration = 1500;
-//   const fadeOutDuration = 1000;
+const menuButton = document.querySelector('.menu-button button');
+const slider = document.querySelector('.slider');
+const closeButton = document.querySelector('.close-button');
 
-//   const fadeIn = () => {
-//     if (charIndex < wordSpans[wordIndex].innerText.length) {
-//       wordSpans[wordIndex].children[charIndex].style.opacity = 1;
-//       charIndex++;
-//       setTimeout(fadeIn, fadeInDuration / wordSpans[wordIndex].innerText.length);
-//     } else {
-//       charIndex = 0;
-//       wordIndex++;
-//       if (wordIndex < wordSpans.length) {
-//         setTimeout(fadeIn, fadeInDuration);
-//       }
-//     }
-//   };
+menuButton.addEventListener('click', () => {
+  slider.classList.add('show');
+});
 
-//   const fadeOut = () => {
-//     if (charIndex < wordSpans[wordIndex].innerText.length) {
-//       wordSpans[wordIndex].children[charIndex].style.opacity = 0;
-//       charIndex++;
-//       setTimeout(fadeOut, fadeOutDuration / wordSpans[wordIndex].innerText.length);
-//     } else {
-//       charIndex = 0;
-//       wordIndex++;
-//       if (wordIndex < wordSpans.length) {
-//         setTimeout(fadeOut, fadeOutDuration);
-//       }
-//     }
-//   };
+closeButton.addEventListener('click', () => {
+  slider.classList.remove('show');
+});
 
-//   const startFade = () => {
-//     fadeIn();
-//     setTimeout(fadeOut, fadeInDuration + 2000);
-//   };
-
-//   sliderTitle.style.opacity = 1;
-//   startFade();
 
 
 
