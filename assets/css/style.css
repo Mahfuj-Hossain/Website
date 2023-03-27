@@ -201,7 +201,7 @@ header {
     align-items: center;
     justify-items: center;
     height: auto;
-    padding: 4rem 1.5rem;
+    padding: 2rem 1.5rem;
   }
   
   .menu img{
@@ -291,8 +291,73 @@ header {
     box-shadow: .6rem -.3rem 3.5rem rgb(184, 179, 179);
     cursor: pointer;
   }
+/* ----------------------------------------
+          Main menu slider 
+------------------------------------------*/
 
-  
+.slider {
+  position: absolute;
+  width: 98%;
+  display: grid;
+  background-color: #191717fb;
+  z-index: 9;
+  transition: all 1s ease-in-out;
+  transform: translateX(-110%);
+  transition:2s ease-in-out;
+  height: 42rem;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+.slider.show {
+  transform: translateX(0%);
+}
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .4rem 1rem;
+  font-size: 2rem;
+  background-color: rgb(119, 6, 6);
+  border: none;
+  cursor: pointer;
+}
+/* The content of menu styling */
+.menu-list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+.heading-menu-slider{
+color: goldenrod;
+display: flex;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+margin-bottom: 1.6rem;
+font-size: 2rem;
+border-bottom: .2rem solid gold;
+width: fit-content;
+padding: 0 1rem;
+padding-bottom: .3rem;
+
+}
+
+.border-menu-heading1, .border-menu-heading2, border-menu-heading3{
+  border-radius: .5rem solid gold;
+}
+.breakfast-menu ul li, .lunch-menu ul li, .evening-menu ul li {
+  list-style: none;
+  font-size: 1.4rem;
+  margin-bottom: .3rem;
+  color: rgb(242, 242, 117);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.breakfast-menu p, .lunch-menu p, .evening-menu p{
+  color: rgb(246, 246, 45);
+  width:22rem;
+  margin-bottom: 1rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
   /*---------------------------------------------------------
    Display are is started from here
    ---------------------------------------------------------*/
