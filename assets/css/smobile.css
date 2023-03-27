@@ -47,6 +47,9 @@ nav.nav-style ul {
     padding-bottom: .5rem;
     border-radius: .2rem;
 }
+.slide {
+    transition: opacity 1.6s ease-in-out;
+  }
 .menu {
     grid-template-columns: 1fr;
     align-items: center;
@@ -70,8 +73,28 @@ nav.nav-style ul {
 #btn span {
     font-size: .8rem;
 }
-
-
+/* menu slider */
+.menu-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    overflow: auto;
+}
+.breakfast-menu p, .lunch-menu p, .evening-menu p {
+    width: 14rem;
+}
+.breakfast-menu ul li, .lunch-menu ul li, .evening-menu ul li {
+    font-size: 1.2rem;
+    color: #b99948;
+}
+.breakfast-menu p, .lunch-menu p, .evening-menu p {
+    font-size: .8rem;
+    color: floralwhite;
+    letter-spacing: .07rem;
+}
+.heading-menu-slider {
+    font-size: 1.5rem;
+}
 /* special menu styling */
 
 .special-menu {
